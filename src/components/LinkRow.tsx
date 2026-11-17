@@ -10,6 +10,9 @@ export default function LinkRow({ primary = 'email' }: { primary?: 'email' | 'li
       <a className={`pill ${primary === 'email' ? 'pill--primary' : ''}`} href={`mailto:${person.email}`}>
         <EnvelopeSimple size={size} weight={weight} /> Email
       </a>
+      <a className="pill" href={person.resume} download="Kartik-Agarwal-Resume.pdf">
+        <FileText size={size} weight={weight} /> Resume
+      </a>
       <a className={`pill ${primary === 'linkedin' ? 'pill--primary' : ''}`} href={person.linkedin} target="_blank" rel="noreferrer">
         <LinkedinLogo size={size} weight={weight} /> LinkedIn
       </a>
@@ -22,11 +25,6 @@ export default function LinkRow({ primary = 'email' }: { primary?: 'email' | 'li
       <a className="pill" href={person.phoneHref}>
         <Phone size={size} weight={weight} /> {person.phone}
       </a>
-      {person.resume && (
-        <a className="pill" href={person.resume} target="_blank" rel="noreferrer">
-          <FileText size={size} weight={weight} /> Resume
-        </a>
-      )}
     </div>
   )
 }

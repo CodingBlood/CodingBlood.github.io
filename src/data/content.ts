@@ -13,8 +13,7 @@ export const person = {
   github: 'https://github.com/CodingBlood',
   linkedin: 'https://www.linkedin.com/in/kartik-agarwal-9a03911b6/',
   leetcode: 'https://leetcode.com/u/Kartik__Agarwal/',
-  // TODO: confirm what the Drive file on the resumes is before linking it here.
-  resume: null as string | null,
+  resume: '/Kartik-Agarwal-Resume.pdf',
   lookingFor: [
     'An internship in summer 2027, in production AI, ML engineering or MLOps.',
     'A master\u2019s thesis project with a company or lab, starting in 2027.',
@@ -29,6 +28,7 @@ export const SITE_URL = 'https://codingblood.github.io'
 export const shareLinks = [
   { id: 'links', label: 'All links', url: SITE_URL + '/links' },
   { id: 'site', label: 'Portfolio', url: SITE_URL },
+  { id: 'resume', label: 'Resume (PDF)', url: SITE_URL + person.resume },
   { id: 'linkedin', label: 'LinkedIn', url: person.linkedin },
   { id: 'github', label: 'GitHub', url: person.github },
   { id: 'email', label: 'Email', url: 'mailto:' + person.email },
